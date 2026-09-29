@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-yssy-dark: #001236;
+  --color-yssy-navy: #001b60;
+  --color-yssy-lime: #c4f72c;
+  --color-yssy-blue: #5b81fc;
+  --color-yssy-gray: #979797;
+  --color-yssy-charcoal: #323232;
+}
+
+body {
+  @apply bg-[#f8f9fa] antialiased text-yssy-dark;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-yssy-gray rounded-full hover:bg-yssy-charcoal;
+}
+
+/* Markdown Styles */
+.prose h1 { @apply text-xl font-bold mb-4 text-yssy-dark border-b border-yssy-gray pb-2; }
+.prose h3 { @apply text-sm font-bold uppercase tracking-wider text-yssy-navy mt-6 mb-2; }
+.prose table { @apply w-full text-xs border-collapse mb-4; }
+.prose th { @apply text-left p-2 bg-yssy-gray/10 border border-yssy-gray/20 text-yssy-dark; }
+.prose td { @apply p-2 border border-yssy-gray/20; }
+.prose hr { @apply border-yssy-gray/20 my-6; }
+.prose code { @apply bg-yssy-gray/10 px-1 rounded text-yssy-navy; }
+
+.btn-yssy-primary {
+  @apply bg-yssy-navy hover:bg-yssy-dark text-white px-6 py-2 rounded-lg font-bold text-sm flex items-center gap-2 transition-all shadow-md active:scale-95 disabled:opacity-50;
+}
+
+.btn-yssy-lime {
+  @apply bg-yssy-lime hover:brightness-90 text-yssy-dark px-6 py-2 rounded-lg font-bold text-sm flex items-center gap-2 transition-all shadow-md active:scale-95 disabled:opacity-50;
+}
+
+.card-yssy {
+  @apply bg-white rounded-xl shadow-sm border border-yssy-gray/10 p-6;
+}

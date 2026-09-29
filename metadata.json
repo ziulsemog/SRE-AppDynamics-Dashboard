@@ -1,0 +1,5 @@
+{
+  "name": "SRE AppDynamics Dashboard Generator",
+  "description": "Gerador de dashboards executivos e checklists técnicos baseados em payloads do AppDynamics para ambientes Log-In e Yamaha.",
+  "requestFramePermissions": []
+}
